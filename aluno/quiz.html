@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CODEQUEST</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Code_quest/css/quiz.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+  <script src="../js/quiz.js" defer></script>
+</head>
+
+<body>
+  <div id="nav-bar">
+    <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a></div>
+    <div id="nav-content">
+        <a href="/code_quest/aluno/modulos.html" class="nav-button">
+            <i class="fas fa-cubes"></i>
+            <span>Módulos</span>
+        </a>
+        <a href="/code_quest/aluno/userpdf.html" class="nav-button">
+            <i class="fas fa-file-pdf"></i>
+            <span>PDFS</span>
+        </a>
+        <a href="/code_quest/html/home.html" class="nav-button">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="/code_quest/aluno/ajuda.html" class="nav-button">
+            <i class="fas fa-question-circle"></i>
+            <span>Ajuda</span>
+        </a>
+        <a href="/code_quest/aluno/perfila.php" class="nav-button">
+            <i class="fas fa-user"></i>
+            <span>Perfil</span>
+        </a>
+        <a href="/code_quest/desafio/desafio_aluno.php" class="nav-button">
+            <i class="fas fa-user"></i>
+            <span>Desafios Semanais</span>
+        </a>
+        <a href="/code_quest/desafio/vizualizar_feedbacks.html" class="nav-button">
+            <i class="fas fa-user"></i>
+            <span>Feedbacks desafios</span>
+        </a>
+        <a href="/code_quest/aluno/grupos_alunos.html" class="nav-button">
+            <i class="fas fa-user"></i>
+            <span>Grupo de alunos</span>
+        </a>
+        <div id="nav-content-highlight"></div>
+    </div>
+</div>
+
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <div class="lives">
+      <i class="fas fa-heart" id="life1"></i>
+      <i class="fas fa-heart" id="life2"></i>
+      <i class="fas fa-heart" id="life3"></i>
+      <i class="fas fa-heart" id="life4"></i>
+      <i class="fas fa-heart" id="life5"></i>
+    </div>
+  </div>
+
+  <div class="container">
+    <main>
+      <div id="quizz-container">
+        <p id="question">
+          <span id="question-number">1</span> &#8212;
+          <span id="question-text">Carregando pergunta...</span>
+        </p>
+        <div id="answers-box">
+          <!-- Botões de resposta carregados dinamicamente -->
+        </div>
+      </div>
+
+      <div id="feedback-popup" class="hide">
+        <p id="feedback-message"></p>
+        <button onclick="closePopup()">Próxima Questão</button>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

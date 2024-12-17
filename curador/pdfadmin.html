@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/code_quest/css/pdfadmin.css">
+</head>
+<body>
+    <div id="nav-bar">
+        <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a>
+        </div>
+        <div id="nav-content">
+            <a href="admin_perguntas.html" class="nav-button">
+                <i class="fas fa-cubes"></i>
+                <span>RESPONDER PERGUNTAS</span>
+            </a>
+            <a href="pdfadmin.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>GERENCIAR PDFS</span>
+            </a>
+            <div id="nav-content-highlight"></div>
+        </div>
+
+    </div>
+    <div id="lista">
+        <h1>PDF's pendentes para avaliação</h1>
+        <ul id="fileList"></ul>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+
+    
+    <script src="/code_quest/js/pdfadmin.js"></script>
+
+    
+</body>
+</html>

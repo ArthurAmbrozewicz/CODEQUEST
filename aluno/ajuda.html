@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - CODEQUEST</title>
+    <link rel="stylesheet" href="../css/ajuda.css">
+</head>
+
+<body>
+    <div id="nav-bar">
+        <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a></div>
+        <div id="nav-content">
+            <a href="/code_quest/aluno/modulos.html" class="nav-button">
+                <i class="fas fa-cubes"></i>
+                <span>Módulos</span>
+            </a>
+            <a href="/code_quest/aluno/userpdf.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>PDFS</span>
+            </a>
+            <a href="/code_quest/html/home.html" class="nav-button">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="/code_quest/aluno/ajuda.html" class="nav-button">
+                <i class="fas fa-question-circle"></i>
+                <span>Ajuda</span>
+            </a>
+            <a href="/code_quest/aluno/perfila.php" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </a>
+            <a href="/code_quest/desafio/desafio_aluno.php" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Desafios Semanais</span>
+            </a>
+            <a href="/code_quest/desafio/vizualizar_feedbacks.html" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Feedbacks desafios</span>
+            </a>
+            <a href="/code_quest/aluno/grupos_alunos.html" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Grupo de alunos</span>
+            </a>
+            <div id="nav-content-highlight"></div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <section class="faq-section">
+            <h1>Perguntas Frequentes</h1>
+            <p>Encontre respostas para perguntas comuns sobre os recursos, serviços e configuração do CODEQUEST. Para
+                maior assistência, nossa equipe de suporte está sempre pronta para ajudar.</p>
+            <div class="faq-container">
+                <!-- Perguntas serão carregadas dinamicamente aqui -->
+            </div>
+            <br>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Posso aprender programação mesmo sem experiência?</button>
+                    <p class="faq-answer">Sim! Nosso site é feito para iniciantes e ensina programação do básico ao
+                        avançado, no seu ritmo.</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Como sei se estou progredindo?</button>
+                    <p class="faq-answer">Você pode acompanhar seu progresso por meio de indicadores de nível e desafios
+                        concluídos.</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Preciso instalar algo para usar o site?</button>
+                    <p class="faq-answer">Não! Tudo funciona diretamente no navegador, sem necessidade de instalações.
+                    </p>
+                </div>
+                <div class="custom-question">
+                    <h2>Não encontrou sua resposta? Envie sua pergunta:</h2>
+                    <textarea id="user-question" rows="5" placeholder="Digite sua pergunta aqui..."></textarea>
+                    <button id="submit-question">Enviar</button>
+                    <p id="status-message"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="../js/faq.js"></script>
+</body>
+
+</html>

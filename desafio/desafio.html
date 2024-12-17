@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desafio.css">
+    <title>Document</title>
+</head>
+
+<body>`
+    <div id="nav-bar">
+        <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a></div>
+        <div id="nav-content">
+            <a href="criar_grupo.html" class="nav-button">
+                <i class="fas fa-cubes"></i>
+                <span>GRUPO DE ALUNOS</span>
+            </a>
+            <a href="/code_quest/professor/pdfs.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>ENVIAR PDF</span>
+            </a>
+            <a href="/code_quest/professor/perfilp.php" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>PERFIL</span>
+            </a>
+            <a href="/code_quest/desafio/desafio.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>CRIAR DESAFIO</span>
+            </a>
+            <a href="/code_quest/desafio/ver_respostas.php" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>RESPOSTAS DESAFIOS</span>
+            </a>
+            <div id="nav-content-highlight"></div>
+        </div>
+    </div>
+    <form action="submit_desafio.php" method="post" id="custom-form">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Dê um título ao seu desafio" required>
+        </div>
+
+        <div class="form-group">
+            <label for="text">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" placeholder="Faça uma breve descrição do desafio"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="linguagem">Linguagem:</label>
+            <select id="linguagem" name="linguagem" required>
+                <option value="">Selecione uma linguagem</option>
+                <option value="PHP">PHP</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="csharp">C#</option>
+                <option value="ruby">Ruby</option>
+                <option value="swift">Swift</option>
+                <option value="go">Go</option>
+                <option value="kotlin">Kotlin</option>
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="dificuldade">Dificuldade:</label>
+            <select id="dificuldade" name="dificuldade" required>
+                <option value="">Selecione a dificuldade do desafio</option>
+                <option value="facil">Fácil</option>
+                <option value="medio">Médio</option>
+                <option value="dificil">Difícil</option>
+
+            </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+
+</body>
+
+</html>

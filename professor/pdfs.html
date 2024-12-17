@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de PDF</title>
+    <link rel="stylesheet" href="/code_quest/css/pdfs.css">
+</head>
+
+<body>
+    <div id="nav-bar">
+        <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a></div>
+        <div id="nav-content">
+            <a href="criar_grupo.html" class="nav-button">
+                <i class="fas fa-cubes"></i>
+                <span>GRUPO DE ALUNOS</span>
+            </a>
+            <a href="/code_quest/professor/pdfs.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>ENVIAR PDF</span>
+            </a>
+            <a href="/code_quest/professor/perfilp.php" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>PERFIL</span>
+            </a>
+            <a href="/code_quest/desafio/desafio.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>CRIAR DESAFIO</span>
+            </a>
+            <a href="/code_quest/desafio/ver_respostas.php" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>RESPOSTAS DESAFIOS</span>
+            </a>
+            <div id="nav-content-highlight"></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Ajude a comunidade CodeQuest e disponha seu material para estudo!</h1>
+        <div class="envio">
+            <form class="upload-form" action="/code_quest/php/pdfs.php" method="post" enctype="multipart/form-data">
+                <label for="uploadpdfs">Arraste ou selecione um arquivo:</label><br>
+                <img src="/code_quest/img/capivara.png" alt="capivara pendurada por balões"><br>
+                <input type="file" id="uploadpdfs" name="uploadpdfs" accept=".pdf"> <br><br>
+                Diga o assunto do Pdf:
+                <input type="text" name="assunto" id="assunto">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

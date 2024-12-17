@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/criar_grupo.css">
+    <title>Criar Grupo</title>
+</head>
+
+<body>
+    <div id="nav-bar">
+        <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a></div>
+        <div id="nav-content">
+            <a href="criar_grupo.html" class="nav-button">
+                <i class="fas fa-cubes"></i>
+                <span>GRUPO DE ALUNOS</span>
+            </a>
+            <a href="/code_quest/professor/pdfs.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>ENVIAR PDF</span>
+            </a>
+            <a href="/code_quest/professor/perfilp.php" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>PERFIL</span>
+            </a>
+            <a href="/code_quest/desafio/desafio.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>CRIAR DESAFIO</span>
+            </a>
+            <a href="/code_quest/desafio/ver_respostas.php" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>RESPOSTAS DESAFIOS</span>
+            </a>
+            <div id="nav-content-highlight"></div>
+        </div>
+    </div>
+    <h1>Criar Novo Grupo</h1>
+
+    <!-- Formulário para criar grupo -->
+    <form id="form-criar-grupo">
+        <label for="nome_grupo">Nome do Grupo:</label><br>
+        <input type="text" id="nome_grupo" name="nome_grupo" required><br><br>
+
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea><br><br>
+
+        <label for="max_integrantes">Máximo de Integrantes:</label><br>
+        <input type="number" id="max_integrantes" name="max_integrantes" min="1" required><br><br>
+
+        <button type="submit">Criar Grupo</button>
+    </form>
+
+    <!-- Área "Meus Grupos" -->
+    <div class="grupos-container" id="meus-grupos">
+        <h2>Meus Grupos</h2>
+        <!-- Grupos serão carregados dinamicamente -->
+    </div>
+
+    <div id="chat-modal" style="display: none;">
+        <div class="chat-content">
+            <h3 id="chat-grupo-nome"></h3>
+            <div id="mensagens" style="height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"></div>
+            <textarea id="nova-mensagem" placeholder="Digite sua mensagem"></textarea>
+            <button id="enviar-mensagem">Enviar</button>
+            <button id="fechar-chat">Fechar</button>
+        </div>
+    </div>
+    <!-- Modal para Exibir Integrantes -->
+    <div id="modal-integrantes">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="nome-grupo-modal">Integrantes do Grupo</span>
+            </div>
+            <div class="modal-body" id="lista-integrantes">
+                <!-- Integrantes serão listados dinamicamente aqui -->
+            </div>
+            <div class="modal-footer">
+                <button id="fechar-modal-integrantes">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/criar_grupo.js"></script>
+    <script src="../js/chat_grupo.js"></script>
+</body>
+
+</html>

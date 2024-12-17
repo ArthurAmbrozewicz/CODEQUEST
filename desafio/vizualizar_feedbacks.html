@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feedback.css">
+    <title>Visualizar Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .desafio {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .desafio h2 {
+            margin: 0;
+        }
+
+        .desafio p {
+            margin: 5px 0;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav-bar">
+        <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a></div>
+        <div id="nav-content">
+            <a href="/code_quest/aluno/modulos.html" class="nav-button">
+                <i class="fas fa-cubes"></i>
+                <span>Módulos</span>
+            </a>
+            <a href="/code_quest/aluno/userpdf.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>PDFS</span>
+            </a>
+            <a href="/code_quest/html/home.html" class="nav-button">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="/code_quest/aluno/ajuda.html" class="nav-button">
+                <i class="fas fa-question-circle"></i>
+                <span>Ajuda</span>
+            </a>
+            <a href="/code_quest/aluno/perfila.php" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </a>
+            <a href="/code_quest/desafio/desafio_aluno.php" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Desafios Semanais</span>
+            </a>
+            <a href="/code_quest/desafio/vizualizar_feedbacks.html" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Feedbacks desafios</span>
+            </a>
+            <a href="/code_quest/aluno/grupos_alunos.html" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Grupo de alunos</span>
+            </a>
+            <div id="nav-content-highlight"></div>
+        </div>
+    </div>
+    <h1>Feedback dos Desafios</h1>
+    <div id="feedback-container">
+        <p>Carregando feedbacks...</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const feedbackContainer = document.getElementById('feedback-container');
+
+            // Função para carregar feedbacks
+            const carregarFeedbacks = async () => {
+                try {
+                    const response = await fetch('http://localhost/code_quest/desafio/obter_feedbacks.php');
+                    if (!response.ok) throw new Error('Erro ao carregar feedbacks');
+
+                    const feedbacks = await response.json();
+                    if (feedbacks.length > 0) {
+                        feedbackContainer.innerHTML = feedbacks.map(feedback => `
+                            <div class="desafio">
+                                <h2>${feedback.nome_desafio}</h2>
+                                <p><strong>Descrição:</strong> ${feedback.descricao}</p>
+                                <p><strong>Resposta do Aluno:</strong> ${feedback.resposta}</p>
+                                <div class="feedback">
+                                    <p><strong>Feedback do Professor:</strong> ${feedback.feedback}</p>
+                                </div>
+                            </div>
+                        `).join('');
+                    } else {
+                        feedbackContainer.innerHTML = '<p>Nenhum feedback disponível no momento.</p>';
+                    }
+                } catch (error) {
+                    console.error('Erro ao carregar feedbacks:', error);
+                    feedbackContainer.innerHTML = '<p>Erro ao carregar feedbacks. Tente novamente mais tarde.</p>';
+                }
+            };
+
+            carregarFeedbacks();
+        });
+    </script>
+</body>
+
+</html>

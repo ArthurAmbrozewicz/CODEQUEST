@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/grupos_alunos.css">
+    <title>Grupos Disponíveis</title>
+</head>
+
+<body>
+    <div id="nav-bar">
+        <div id="nav-header"><a id="nav-title" href="#">CODE<span>QUEST</span></a></div>
+        <div id="nav-content">
+            <a href="/code_quest/aluno/modulos.html" class="nav-button">
+                <i class="fas fa-cubes"></i>
+                <span>Módulos</span>
+            </a>
+            <a href="/code_quest/aluno/userpdf.html" class="nav-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>PDFS</span>
+            </a>
+            <a href="/code_quest/html/home.html" class="nav-button">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="/code_quest/aluno/ajuda.html" class="nav-button">
+                <i class="fas fa-question-circle"></i>
+                <span>Ajuda</span>
+            </a>
+            <a href="/code_quest/aluno/perfila.php" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </a>
+            <a href="/code_quest/desafio/desafio_aluno.php" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Desafios Semanais</span>
+            </a>
+            <a href="/code_quest/desafio/vizualizar_feedbacks.html" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Feedbacks desafios</span>
+            </a>
+            <a href="/code_quest/aluno/grupos_alunos.html" class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Grupo de alunos</span>
+            </a>
+            <div id="nav-content-highlight"></div>
+        </div>
+    </div>
+    <h1>Grupos Disponíveis</h1>
+    <div id="todos-grupos"></div>
+    <div id="meus-grupos"></div>
+
+    <!-- Modal do Chat -->
+    <div id="chat-modal" style="display: none;">
+        <div class="chat-content">
+            <h3 id="chat-grupo-nome"></h3>
+            <div id="mensagens" style="height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"></div>
+            <textarea id="nova-mensagem" placeholder="Digite sua mensagem"></textarea>
+            <button id="enviar-mensagem">Enviar</button>
+            <button id="fechar-chat">Fechar</button>
+        </div>
+    </div>
+</body>
+<script src="../js/chat_grupo.js"></script>
+<script src="../js/grupos_alunos.js"></script>
+
+</html>
